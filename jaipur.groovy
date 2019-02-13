@@ -136,7 +136,7 @@ pipeline {
                     }
                 }
                 stage('TC - 10, 4') {
-                    stages {
+                    parallel {
                         stage('TC - zzz, 1') {
                             steps {
                                 echo 'blah'
