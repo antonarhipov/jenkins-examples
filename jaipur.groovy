@@ -138,8 +138,13 @@ pipeline {
                 stage('TC - 10, 4') {
                     parallel {
                         stage('TC - zzz, 1') {
-                            steps {
-                                echo 'blah'
+                            parallel {
+                                stage('Nested1') {
+                                    steps { echo 'hello'}
+                                }
+                                stage('Nested2') {
+                                    steps { echo 'hello'}
+                                }
                             }
                         }
                         stage('TC - zzz, 2') {
