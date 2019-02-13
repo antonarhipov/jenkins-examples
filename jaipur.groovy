@@ -63,37 +63,7 @@ pipeline {
                     }
                 }
                 stage('TeamCity Parallel Stage Second 2 - with nesting') {
-                    parallel {
-                        stage('TeamCity Parallel Nested Stage 1') {
-                            steps {
-                                echo "TC P Stage 1"
-                            }
-                        }
-                        stage('TeamCity Parallel Nested Stage 2') {
-                            steps {
-                                echo "TC P Stage 1"
-                            }
-                        }
-                        stage('TeamCity Parallel Nested Stage 3 - mwahaha') {
-                            parallel {
-                                stage('TeamCity Parallel Nested Stage 1 - mwahaha') {
-                                    steps {
-                                        echo "TC P Stage 1"
-                                    }
-                                }
-                                stage('TeamCity Parallel Nested Stage 2 - mwahaha') {
-                                    steps {
-                                        echo "TC P Stage 1"
-                                    }
-                                }
-                                stage('TeamCity Parallel Nested Stage 3 - mwahaha') {
-                                    steps {
-                                        echo "TC P Stage 1"
-                                    }
-                                }
-                            }
-                        }
-                    }
+
                 }
                 stage('TeamCity Parallel Stage Second 3') {
                     steps {
