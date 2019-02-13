@@ -119,8 +119,51 @@ pipeline {
 
 
         stage('TeamCity Stage 10') {
-            steps {
-                echo "TC Stage 1"
+            stages {
+                stage('TC - 10, 1') {
+                    steps {
+                        echo 'blah'
+                    }
+                }
+                stage('TC - 10, 2') {
+                    steps {
+                        echo 'blah'
+                    }
+                }
+                stage('TC - 10, 3') {
+                    steps {
+                        echo 'blah'
+                    }
+                }
+                stage('TC - 10, 4') {
+                    stages {
+                        stage('TC - zzz, 1') {
+                            steps {
+                                echo 'blah'
+                            }
+                        }
+                        stage('TC - zzz, 1') {
+                            steps {
+                                echo 'blah'
+                            }
+                        }
+                        stage('TC - zzz, 1') {
+                            steps {
+                                echo 'blah'
+                            }
+                        }
+                        stage('TC - zzz, 1') {
+                            steps {
+                                echo 'blah'
+                            }
+                        }
+                    }
+                }
+                stage('TC - 10, 5') {
+                    steps {
+                        echo 'blah'
+                    }
+                }
             }
         }
 
