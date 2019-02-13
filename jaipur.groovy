@@ -48,7 +48,7 @@ pipeline {
             }
         }
 
-        stage('TeamCity Stage 2') {
+        stage('TeamCity Stage 3') {
             steps {
                 echo "TC Stage 1"
             }
