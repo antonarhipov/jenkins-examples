@@ -6,7 +6,8 @@ pipeline {
                 echo 'Hello, Maven'
             }
         }
-        stage('Stage 2') {
+        stages {
+          stage('Stage 2') {
             stage('Stage 2-1') {
                 steps {
                     echo 'Hello, 2-1'
@@ -17,6 +18,7 @@ pipeline {
                     echo 'Hello, 2-2'
                 }
             }
+          }
         }
     }
 }
