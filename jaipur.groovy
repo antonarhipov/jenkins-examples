@@ -58,18 +58,30 @@ pipeline {
         stage('TeamCity Parallel Stage Second') {
             parallel {
                 stage('TeamCity Parallel Stage Second 1') {
-                    steps {
-                        echo "TC P Stage 1"
+                    stages {
+                        stage('blah 1') {}
+                        stage('blah 2') {}
+                        stage('blah 3') {}
+                        stage('blah 4') {}
+                        stage('blah 5') {}
                     }
                 }
                 stage('TeamCity Parallel Stage Second 2 - with nesting') {
-                    steps {
-                        echo "TC P Stage 1"
+                    stages {
+                        stage('mlah 1') {}
+                        stage('mlah 2') {}
+                        stage('mlah 3') {}
+                        stage('mlah 4') {}
+                        stage('mlah 5') {}
                     }
                 }
                 stage('TeamCity Parallel Stage Second 3') {
-                    steps {
-                        echo "TC P Stage 1"
+                    stages {
+                        stage('quux 1') {}
+                        stage('quux 2') {}
+                        stage('quux 3') {}
+                        stage('quux 4') {}
+                        stage('quux 5') {}
                     }
                 }
             }
@@ -138,13 +150,8 @@ pipeline {
                 stage('TC - 10, 4') {
                     parallel {
                         stage('TC - zzz, 1') {
-                            parallel {
-                                stage('Nested1') {
-                                    steps { echo 'hello'}
-                                }
-                                stage('Nested2') {
-                                    steps { echo 'hello'}
-                                }
+                            steps {
+                                echo 'blah'
                             }
                         }
                         stage('TC - zzz, 2') {
