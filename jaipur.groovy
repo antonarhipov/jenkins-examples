@@ -66,7 +66,7 @@ pipeline {
                         stage('blah 5') {steps { echo '' }}
                     }
                 }
-                stage('TeamCity Parallel Stage Second 2 - with nesting') {
+                stage('TeamCity Parallel Stage Second 2') {
                     stages {
                         stage('mlah 1') {steps { echo '' }}
                         stage('mlah 2') {steps { echo '' }}
