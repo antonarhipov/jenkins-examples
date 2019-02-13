@@ -139,20 +139,20 @@ pipeline {
         }
 
 
-        stage('TeamCity Stage 8') {
-            steps {
-                echo "TC Stage 1"
-            }
-        }
-
-
         stage('TeamCity Stage 9') {
             steps {
                 echo "TC Stage 1"
             }
         }
 
+
         stage('TeamCity Stage 10') {
+            steps {
+                echo "TC Stage 1"
+            }
+        }
+
+        stage('TeamCity Stage 11') {
             steps {
                 echo "TC Stage 1"
             }
