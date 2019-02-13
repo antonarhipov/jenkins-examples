@@ -2,10 +2,8 @@ pipeline {
     agent any
     stages {
         stage('Compile') {
-            stage {
-                steps {
-                    echo "Compile"
-                }
+            steps {
+                echo "Compile"
             }
         }
         stage('Integration Tests') {
@@ -48,7 +46,7 @@ pipeline {
                 }
             }
         }
-        stage('Deploy'){
+        stage('Deploy') {
             steps {
                 echo 'Deploy'
             }
