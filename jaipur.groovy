@@ -7,7 +7,6 @@ pipeline {
             }
         }
         stage('Integration Tests') {
-            stages {
                 parallel {
                     for (int i = 0; i < 10; i++) {
                         stage("Integration Tests / Stage ${i}") {
@@ -17,10 +16,8 @@ pipeline {
                         }
                     }
                 }
-            }
         }
         stage('Packaging') {
-            stages {
                 parallel {
                     for (int i = 0; i < 5; i++) {
                         stage("Packaing / Stage ${i}") {
@@ -30,10 +27,8 @@ pipeline {
                         }
                     }
                 }
-            }
         }
         stage('More testing') {
-            stages {
                 parallel {
                     int x = 20
                     for (int i = 0; i < x; i++) {
@@ -44,7 +39,6 @@ pipeline {
                         }
                     }
                 }
-            }
         }
         stage('Deploy') {
             steps {
