@@ -59,29 +59,29 @@ pipeline {
             parallel {
                 stage('TeamCity Parallel Stage Second 1') {
                     stages {
-                        stage('blah 1') {}
-                        stage('blah 2') {}
-                        stage('blah 3') {}
-                        stage('blah 4') {}
-                        stage('blah 5') {}
+                        stage('blah 1') {steps { echo '' }}
+                        stage('blah 2') {steps { echo '' }}
+                        stage('blah 3') {steps { echo '' }}
+                        stage('blah 4') {steps { echo '' }}
+                        stage('blah 5') {steps { echo '' }}
                     }
                 }
                 stage('TeamCity Parallel Stage Second 2 - with nesting') {
                     stages {
-                        stage('mlah 1') {}
-                        stage('mlah 2') {}
-                        stage('mlah 3') {}
-                        stage('mlah 4') {}
-                        stage('mlah 5') {}
+                        stage('mlah 1') {steps { echo '' }}
+                        stage('mlah 2') {steps { echo '' }}
+                        stage('mlah 3') {steps { echo '' }}
+                        stage('mlah 4') {steps { echo '' }}
+                        stage('mlah 5') {steps { echo '' }}
                     }
                 }
                 stage('TeamCity Parallel Stage Second 3') {
                     stages {
-                        stage('quux 1') {}
-                        stage('quux 2') {}
-                        stage('quux 3') {}
-                        stage('quux 4') {}
-                        stage('quux 5') {}
+                        stage('quux 1') {steps { echo '' }}
+                        stage('quux 2') {steps { echo '' }}
+                        stage('quux 3') {steps { echo '' }}
+                        stage('quux 4') {steps { echo '' }}
+                        stage('quux 5') {steps { echo '' }}
                     }
                 }
             }
