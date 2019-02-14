@@ -207,22 +207,12 @@ pipeline {
             steps {
                 sh "echo 'TC Stage 1' > stage4.txt"
             }
-            post {
-                success {
-                    archiveArtifacts = "*.txt"
-                }
-            }
         }
 
 
         stage('TeamCity Stage 5') {
             steps {
                 sh "echo 'TC Stage 1' > stage5.txt"
-            }
-            post {
-                success {
-                    archiveArtifacts = "*.txt"
-                }
             }
         }
 
@@ -231,22 +221,12 @@ pipeline {
             steps {
                 sh "echo 'TC Stage 1' > stage6.txt"
             }
-            post {
-                success {
-                    archiveArtifacts = "*.txt"
-                }
-            }
         }
 
 
         stage('TeamCity Stage 7') {
             steps {
                 sh "echo 'TC Stage 1' > stage7.txt"
-            }
-            post {
-                success {
-                    archiveArtifacts = "*.txt"
-                }
             }
         }
 
@@ -255,22 +235,12 @@ pipeline {
             steps {
                 sh "echo 'TC Stage 1' > stage8.txt"
             }
-            post {
-                success {
-                    archiveArtifacts = "*.txt"
-                }
-            }
         }
 
 
         stage('TeamCity Stage 9') {
             steps {
                 sh "echo 'TC Stage 1' > stage9.txt"
-            }
-            post {
-                success {
-                    archiveArtifacts = "*.txt"
-                }
             }
         }
 
@@ -331,5 +301,11 @@ pipeline {
         }
 
 
+    }
+
+    post {
+        success {
+            archiveArtifacts = "*.txt"
+        }
     }
 }
