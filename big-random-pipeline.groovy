@@ -205,42 +205,72 @@ pipeline {
 
         stage('TeamCity Stage 4') {
             steps {
-                echo "TC Stage 1"
+                sh "echo 'TC Stage 1' > stage4.txt"
+            }
+            post {
+                success {
+                    archiveArtifacts = "*.txt"
+                }
             }
         }
 
 
         stage('TeamCity Stage 5') {
             steps {
-                echo "TC Stage 1"
+                sh "echo 'TC Stage 1' > stage5.txt"
+            }
+            post {
+                success {
+                    archiveArtifacts = "*.txt"
+                }
             }
         }
 
 
         stage('TeamCity Stage 6') {
             steps {
-                echo "TC Stage 1"
+                sh "echo 'TC Stage 1' > stage6.txt"
+            }
+            post {
+                success {
+                    archiveArtifacts = "*.txt"
+                }
             }
         }
 
 
         stage('TeamCity Stage 7') {
             steps {
-                echo "TC Stage 1"
+                sh "echo 'TC Stage 1' > stage7.txt"
+            }
+            post {
+                success {
+                    archiveArtifacts = "*.txt"
+                }
             }
         }
 
 
         stage('TeamCity Stage 8') {
             steps {
-                echo "TC Stage 1"
+                sh "echo 'TC Stage 1' > stage8.txt"
+            }
+            post {
+                success {
+                    archiveArtifacts = "*.txt"
+                }
             }
         }
 
 
         stage('TeamCity Stage 9') {
             steps {
-                echo "TC Stage 1"
+                sh "echo 'TC Stage 1' > stage9.txt"
+            }
+            post {
+                success {
+                    archiveArtifacts = "*.txt"
+                }
             }
         }
 
