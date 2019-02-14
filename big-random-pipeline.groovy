@@ -64,16 +64,16 @@ pipeline {
                         echo "TC P Stage 1"
                     }
                 }
-//                stage('TeamCity Parallel Stage 12') {
-//                    steps {
-//                        echo "TC P Stage 1"
-//                    }
-//                }
-//                stage('TeamCity Parallel Stage 13') {
-//                    steps {
-//                        echo "TC P Stage 1"
-//                    }
-//                }
+                stage('TeamCity Parallel Stage 12') {
+                    steps {
+                        echo "TC P Stage 1"
+                    }
+                }
+                stage('TeamCity Parallel Stage 13') {
+                    steps {
+                        echo "TC P Stage 1"
+                    }
+                }
 //                stage('TeamCity Parallel Stage 14') {
 //                    steps {
 //                        echo "TC P Stage 1"
