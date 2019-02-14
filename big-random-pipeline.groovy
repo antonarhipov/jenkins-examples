@@ -304,8 +304,8 @@ pipeline {
     }
 
     post {
-        success {
-            archiveArtifacts = "*.txt"
+        always {
+            archiveArtifacts artifacts: '*.txt', fingerprint: true
         }
     }
 }
