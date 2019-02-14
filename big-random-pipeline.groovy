@@ -64,65 +64,66 @@ pipeline {
                         echo "TC P Stage 1"
                     }
                 }
-                stage('TeamCity Parallel Stage 12') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                } stage('TeamCity Parallel Stage 13') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
-                stage('TeamCity Parallel Stage 14') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
-                stage('TeamCity Parallel Stage 15') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
-                stage('TeamCity Parallel Stage 16') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
-                stage('TeamCity Parallel Stage 17') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
-                stage('TeamCity Parallel Stage 18') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
-                stage('TeamCity Parallel Stage 19') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
-                stage('TeamCity Parallel Stage 20') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
-                stage('TeamCity Parallel Stage 21') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
-                stage('TeamCity Parallel Stage 22') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
-                stage('TeamCity Parallel Stage 23') {
-                    steps {
-                        echo "TC P Stage 1"
-                    }
-                }
+//                stage('TeamCity Parallel Stage 12') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 13') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 14') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 15') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 16') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 17') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 18') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 19') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 20') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 21') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 22') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
+//                stage('TeamCity Parallel Stage 23') {
+//                    steps {
+//                        echo "TC P Stage 1"
+//                    }
+//                }
             }
         }
 
