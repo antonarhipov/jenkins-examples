@@ -12,7 +12,7 @@ pipeline {
                 }
                 stage('Example-2'){
                     steps {
-                        sh 'echo > file.txt'
+                        sh 'echo AAA > file.txt'
                     }
                 }
             }
@@ -33,7 +33,7 @@ pipeline {
                 }
                 stage('Example-4'){
                     steps {
-                        sh 'echo > file.txt'
+                        sh 'echo BBB > file.txt'
                     }
                 }
             }
