@@ -24,23 +24,22 @@ pipeline {
         }
         stage('Example Test') {
             agent { docker 'openjdk:8-jre' } 
-                stages {
-                    stage('Example-3'){
-                        steps {
-                            echo 'Hello, JDK'
-                            sh 'java -version'
-                        }
-                    }
-                    stage('Example-4'){
-                        steps {
-                            sh 'echo > file.txt'
-                        }
+            stages {
+                stage('Example-3'){
+                    steps {
+                        echo 'Hello, JDK'
+                        sh 'java -version'
                     }
                 }
-                post {
-                    always {
-                        archiveArtifacts artifacts: '*.txt', fingerprint: true
+                stage('Example-4'){
+                    steps {
+                        sh 'echo > file.txt'
                     }
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: '*.txt', fingerprint: true
                 }
             }
         }
