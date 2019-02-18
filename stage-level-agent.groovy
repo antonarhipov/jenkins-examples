@@ -17,11 +17,6 @@ pipeline {
                     }
                 }
             }
-            post {
-                always {
-                    archiveArtifacts artifacts: '*.txt', fingerprint: true
-                }
-            }
         }
         stage('Example Test') {
             agent { docker 'openjdk:8-jre' } 
