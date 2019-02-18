@@ -10,7 +10,7 @@ pipeline {
                         sh 'mvn --version'
                     }
                 }
-                stage('Example-2){
+                stage('Example-2'){
                     steps {
                         sh 'echo > file.txt'
                     }
@@ -31,7 +31,7 @@ pipeline {
                             sh 'java -version'
                         }
                     }
-                    stage('Example-2){
+                    stage('Example-4'){
                         steps {
                             sh 'echo > file.txt'
                         }
