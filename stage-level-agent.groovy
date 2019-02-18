@@ -3,18 +3,45 @@ pipeline {
     stages {
         stage('Example Build') {
             agent { docker 'maven:3-alpine' } 
-            steps {
-                echo 'Hello, Maven'
-                sh 'mvn --version'
-                sh 'echo > file.txt'
+            stages {
+                stage('Example-1'){
+                    steps {
+                        echo 'Hello, Maven'
+                        sh 'mvn --version'
+                    }
+                }
+                stage('Example-2){
+                    steps {
+                        sh 'echo > file.txt'
+                    }
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: '*.txt', fingerprint: true
+                }
             }
         }
         stage('Example Test') {
             agent { docker 'openjdk:8-jre' } 
-            steps {
-                echo 'Hello, JDK'
-                sh 'java -version'
-                sh 'echo > file.txt'                
+                stages {
+                    stage('Example-3'){
+                        steps {
+                            echo 'Hello, JDK'
+                            sh 'java -version'
+                        }
+                    }
+                    stage('Example-2){
+                        steps {
+                            sh 'echo > file.txt'
+                        }
+                    }
+                }
+                post {
+                    always {
+                        archiveArtifacts artifacts: '*.txt', fingerprint: true
+                    }
+                }
             }
         }
     }
