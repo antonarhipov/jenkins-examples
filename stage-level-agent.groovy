@@ -12,7 +12,8 @@ pipeline {
                 }
                 stage('Example-2'){
                     steps {
-                        sh 'echo AAA > file.txt'
+                        sh 'echo AAA >> file.txt'
+                        stash includes: 'file.txt', name: 'app'
                     }
                 }
             }
@@ -33,7 +34,8 @@ pipeline {
                 }
                 stage('Example-4'){
                     steps {
-                        sh 'echo BBB > file.txt'
+                        unstash 'app'
+                        sh 'echo BBB >> file.txt'
                     }
                 }
             }
