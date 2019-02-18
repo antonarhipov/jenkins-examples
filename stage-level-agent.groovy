@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Hello, Maven'
                 sh 'mvn --version'
+                sh 'echo > file.txt'
             }
         }
         stage('Example Test') {
@@ -13,6 +14,7 @@ pipeline {
             steps {
                 echo 'Hello, JDK'
                 sh 'java -version'
+                sh 'echo > file.txt'                
             }
         }
     }
