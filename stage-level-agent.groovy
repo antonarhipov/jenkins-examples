@@ -33,6 +33,11 @@ pipeline {
                         sh 'echo BBB >> file.txt'
                     }
                 }
+                stage('Example-5'){
+                    steps {
+                        sh 'echo CCC >> file.txt'
+                    }
+                }
             }
             post {
                 always {
