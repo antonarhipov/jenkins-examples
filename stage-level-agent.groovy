@@ -4,7 +4,7 @@ pipeline {
         stage('Example Build') {
             agent {
                 docker {
-                    label 'master'
+                    label 'third'
                     image 'maven:3-alpine'
                 }
             }
