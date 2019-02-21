@@ -27,7 +27,7 @@ pipeline {
             agent {
                 docker {
                     label 'secondary'
-                    docker 'openjdk:8-jre'
+                    image 'openjdk:8-jre'
                 }
             }
             stages {
