@@ -4,7 +4,7 @@ pipeline {
         stage('Example Build') {
             agent {
                 docker {
-                    label 'third'
+//                    label 'third'
                     image 'maven:3-alpine'
                 }
             }
@@ -26,7 +26,7 @@ pipeline {
         stage('Example Test') {
             agent {
                 docker {
-                    label 'secondary'
+//                    label 'secondary'
                     image 'openjdk:8-jre'
                 }
             }
