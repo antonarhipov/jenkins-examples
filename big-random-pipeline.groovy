@@ -2,9 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Start') {
-            steps {
-                echo "Hello 1"
-            }
+                steps {
+                    echo "Hello 1"
+                }
         }
 
         stage('TeamCity Parallel Stage / First Time') {

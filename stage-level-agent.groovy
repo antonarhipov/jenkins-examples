@@ -2,7 +2,11 @@ pipeline {
     agent none 
     stages {
         stage('Example Build') {
-            agent { docker 'maven:3-alpine' } 
+            agent {
+                node("master"){
+                    docker 'maven:3-alpine'
+                }
+            }
             stages {
                 stage('Example-1'){
                     steps {
@@ -19,7 +23,11 @@ pipeline {
             }
         }
         stage('Example Test') {
-            agent { docker 'openjdk:8-jre' } 
+            agent {
+                node("secondary") {
+                    docker 'openjdk:8-jre'
+                }
+            }
             stages {
                 stage('Example-3'){
                     steps {
